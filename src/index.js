@@ -28,6 +28,10 @@ app.get('/about',(req,res)=>{
 app.listen(Port,()=>{
     console.log('listening ON PORT 80')
 })
+
+
+
+    //Json File serving 
     // app.get('/temp',(req,res)=>{
     //     res.send([{
     //         nam:'shoukat',
