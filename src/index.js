@@ -3,6 +3,7 @@ const express= require('express');
 const { stat } = require('fs');
 const app=express()
 const path=require('path')
+const Port=80
 
 
 // console.log(__dirname)
@@ -24,8 +25,7 @@ app.get('/about',(req,res)=>{
     res.send('about page')
 })
 
-
-app.listen(80,()=>{
+app.listen(Port,()=>{
     console.log('listening ON PORT 80')
 })
     // app.get('/temp',(req,res)=>{
