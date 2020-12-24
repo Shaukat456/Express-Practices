@@ -1,57 +1,89 @@
-const { static } = require('express');
-const express= require('express');
-const { stat } = require('fs');
+const express=require('express');
 const app=express()
-const path=require('path')
-const Port=80
+const port=80;
+const path =require('path');
+const { stat } = require('fs');
 
+// console.log(path.join(__dirname,'../public'))
+// const staticPath = path.join(__dirname,'../public1')
+// console.log(staticPath)
 
-// console.log(__dirname)
-// console.log(path.join(__dirname, '../public'))
-
-const staticPath=path.join(__dirname, '../public')
-
-//Built-in  middleware
-app.use(express.static(staticPath))
-
+app.set('view engine','hbs')
+const staticpath2=path.join(__dirname,'../public2')
+app.use(express.static(staticpath2))
 
 
 app.get('/',(req,res)=>{
-    // res.write('<h1>home page</h1>')
-    // res.write('<h1>about page</h1>')
-    res.send('hello');
-})
-app.get('/about',(req,res)=>{
-    res.send('about page')
+    res.send('heloo')
 })
 
-app.listen(Port,()=>{
-    console.log('listening ON PORT 80')
+app.get('/',(req,res)=>{
+    res.render("index.hbs")
 })
 
 
+app.listen(port,()=>{
+    console.log('listening on port 80')
+})
 
-    //Json File serving 
-    // app.get('/temp',(req,res)=>{
-    //     res.send([{
-    //         nam:'shoukat',
-    //         age:18,
-    //             },
-    //             {
-    //         nam:'shoukat',
-    //         age:18,
-    //             },
-    //             {
-    //         nam:'shoukat',
-    //         age:18,
-    //             },
-    //             {
-    //         nam:'shoukat',
-    //         age:18,
-    //             },
-    //         ])
-    //     })
-    // app.get('/temperature',(req,res)=>{
-    //     res.send({
-    //      )
-    // })
+
+
+
+
+// const { static } = require('express');
+// const express= require('express');
+// const { stat } = require('fs');
+// const app=express()
+// const path=require('path')
+// const Port=80
+
+
+// // console.log(__dirname)
+// // console.log(path.join(__dirname, '../public'))
+
+// const staticPath=path.join(__dirname, '../public')
+
+// //Built-in  middleware
+// app.use(express.static(staticPath))
+
+
+
+// app.get('/',(req,res)=>{
+//     // res.write('<h1>home page</h1>')
+//     // res.write('<h1>about page</h1>')
+//     res.send('hello');
+// })
+// app.get('/About',(req,res)=>{
+//     res.send('about page')
+// })
+
+// app.listen(Port,()=>{
+//     console.log('listening ON PORT 80')
+// })
+
+
+
+//     //Json File serving 
+//     // app.get('/temp',(req,res)=>{
+//     //     res.send([{
+//     //         nam:'shoukat',
+//     //         age:18,
+//     //             },
+//     //             {
+//     //         nam:'shoukat',
+//     //         age:18,
+//     //             },
+//     //             {
+//     //         nam:'shoukat',
+//     //         age:18,
+//     //             },
+//     //             {
+//     //         nam:'shoukat',
+//     //         age:18,
+//     //             },
+//     //         ])
+//     //     })
+//     // app.get('/temperature',(req,res)=>{
+//     //     res.send({
+//     //      )
+//     // })
