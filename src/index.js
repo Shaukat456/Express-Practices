@@ -8,17 +8,15 @@ const { stat } = require('fs');
 // const staticPath = path.join(__dirname,'../public1')
 // console.log(staticPath)
 
+const staticpath=path.join(__dirname,'../public')
 app.set('view engine','hbs')
-const staticpath2=path.join(__dirname,'../public2')
-app.use(express.static(staticpath2))
+
+app.use(express.static(staticpath))
 
 
-app.get('/',(req,res)=>{
-    res.send('heloo')
-})
 
 app.get('/',(req,res)=>{
-    res.render("index.hbs")
+    res.render("bbb")
 })
 
 
