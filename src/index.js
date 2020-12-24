@@ -4,9 +4,6 @@ const port=80;
 const path =require('path');
 const { stat } = require('fs');
 
-// console.log(path.join(__dirname,'../public'))
-// const staticPath = path.join(__dirname,'../public1')
-// console.log(staticPath)
 
 const staticpath=path.join(__dirname,'../public')
 app.set('view engine','hbs')
@@ -47,41 +44,50 @@ app.listen(port,()=>{
 
 
 // app.get('/',(req,res)=>{
-//     // res.write('<h1>home page</h1>')
-//     // res.write('<h1>about page</h1>')
-//     res.send('hello');
+    //     // res.write('<h1>home page</h1>')
+    //     // res.write('<h1>about page</h1>')
+    //     res.send('hello');
 // })
 // app.get('/About',(req,res)=>{
 //     res.send('about page')
 // })
 
 // app.listen(Port,()=>{
-//     console.log('listening ON PORT 80')
-// })
-
-
-
+    //     console.log('listening ON PORT 80')
+    // })
+    
+    
+    
 //     //Json File serving 
 //     // app.get('/temp',(req,res)=>{
-//     //     res.send([{
-//     //         nam:'shoukat',
-//     //         age:18,
-//     //             },
-//     //             {
-//     //         nam:'shoukat',
-//     //         age:18,
-//     //             },
-//     //             {
-//     //         nam:'shoukat',
-//     //         age:18,
-//     //             },
-//     //             {
-//     //         nam:'shoukat',
-//     //         age:18,
+    //     //     res.send([{
+        //     //         nam:'shoukat',
+        //     //         age:18,
+        //     //             },
+        //     //             {
+            //     //         nam:'shoukat',
+            //     //         age:18,
+            //     //             },
+            //     //             {
+                //     //         nam:'shoukat',
+                //     //         age:18,
+                //     //             },
+                //     //             {
+                    //     //         nam:'shoukat',
+                    //     //         age:18,
 //     //             },
 //     //         ])
 //     //     })
 //     // app.get('/temperature',(req,res)=>{
-//     //     res.send({
-//     //      )
+    //     //     res.send({
+        //     //      )
+
+
+
+
+
+        
+        // console.log(path.join(__dirname,'../public'))
+        // const staticPath = path.join(__dirname,'../public1')
+        // console.log(staticPath)
 //     // })
